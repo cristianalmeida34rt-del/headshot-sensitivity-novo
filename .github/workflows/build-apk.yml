@@ -24,11 +24,17 @@ jobs:
           packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - name: Aceitar licenças do Android SDK
         run: yes | sdkmanager --licenses || true
-      - name: Manter estável a assinatura debug do APK
+      - name: Restaurar assinatura estável do APK de teste
         uses: actions/cache@v4
         with:
-          path: ~/.android/debug.keystore
-          key: headshot-debug-keystore-v1-${{ runner.os }}
+          path: ${{ github.workspace }}/.android/debug.keystore
+          key: headshot-debug-keystore-v2-${{ runner.os }}
+      - name: Preparar assinatura estável do APK de teste
+        run: |
+          mkdir -p .android
+          if [ ! -f .android/debug.keystore ]; then
+            keytool -genkeypair -v -keystore .android/debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 10000
+          fi
       - name: Conferir AndroidManifest
         run: |
           echo "===== INICIO DO MANIFEST ====="
