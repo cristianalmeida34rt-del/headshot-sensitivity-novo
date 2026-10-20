@@ -34,7 +34,6 @@ import androidx.credentials.CredentialManagerCallback;
 
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption;
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential;
-import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException;
 
 import org.json.JSONObject;
 
@@ -172,7 +171,7 @@ public class MainActivity extends Activity {
                 authPrefs.edit().putString("email", email).putString("name", name == null ? "" : name).apply();
                 runJs("onGoogleSignInSuccess(" + JSONObject.quote(name == null ? "" : name)
                         + "," + JSONObject.quote(email) + ")");
-            } catch (GoogleIdTokenParsingException error) {
+            } catch (Exception error) {
                 runJs("onGoogleSignInError(\"Não foi possível ler a resposta de login do Google. Atualize o Google Play Services e tente de novo.\")");
             }
         }
