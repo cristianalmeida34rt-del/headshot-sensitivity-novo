@@ -6,6 +6,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.BatteryManager;
 import android.os.Build;
@@ -105,6 +106,25 @@ public class MainActivity extends Activity {
                 return info.toString();
             } catch (Exception error) {
                 return "{}";
+            }
+        }
+
+        @JavascriptInterface
+        public boolean openOfficialUrl(String url) {
+            try {
+                Uri uri = Uri.parse(url);
+                String host = uri.getHost();
+                boolean officialHost = "ff.garena.com".equals(host)
+                        || "freefiremobile.com".equals(host)
+                        || "www.freefiremobile.com".equals(host)
+                        || "www.garena.com".equals(host);
+                if (!"https".equals(uri.getScheme()) || !officialHost) return false;
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+                return true;
+            } catch (Exception error) {
+                return false;
             }
         }
     }
