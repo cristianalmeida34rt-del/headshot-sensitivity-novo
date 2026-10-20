@@ -2,13 +2,22 @@
 package com.headshotsensitivity;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.BatteryManager;
+import android.os.Build;
+import android.util.DisplayMetrics;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
+import android.webkit.JavascriptInterface;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.FrameLayout;
+import org.json.JSONObject;
 
 public class MainActivity extends Activity {
 
@@ -32,6 +41,7 @@ public class MainActivity extends Activity {
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setDefaultTextEncodingName("UTF-8");
+        webView.addJavascriptInterface(new DeviceBridge(this), "AndroidDevice");
 
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
@@ -50,6 +60,52 @@ public class MainActivity extends Activity {
             webView.goBack();
         } else {
             super.onBackPressed();
+        }
+    }
+
+    public static class DeviceBridge {
+        private final Context context;
+
+        DeviceBridge(Context context) {
+            this.context = context.getApplicationContext();
+        }
+
+        @JavascriptInterface
+        public String getDeviceInfo() {
+            try {
+                DisplayMetrics display = context.getResources().getDisplayMetrics();
+                ActivityManager.MemoryInfo memory = new ActivityManager.MemoryInfo();
+                ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+                if (manager != null) manager.getMemoryInfo(memory);
+
+                Intent battery = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+                int batteryPercent = -1;
+                boolean charging = false;
+                if (battery != null) {
+                    int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+                    int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+                    if (level >= 0 && scale > 0) batteryPercent = Math.round(level * 100f / scale);
+                    int status = battery.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+                    charging = status == BatteryManager.BATTERY_STATUS_CHARGING
+                            || status == BatteryManager.BATTERY_STATUS_FULL;
+                }
+
+                JSONObject info = new JSONObject();
+                info.put("model", Build.MANUFACTURER + " " + Build.MODEL);
+                info.put("androidVersion", Build.VERSION.RELEASE);
+                info.put("sdk", Build.VERSION.SDK_INT);
+                info.put("screenWidth", display.widthPixels);
+                info.put("screenHeight", display.heightPixels);
+                info.put("densityDpi", display.densityDpi);
+                info.put("density", display.density);
+                info.put("ramTotalMb", memory.totalMem / (1024L * 1024L));
+                info.put("ramAvailableMb", memory.availMem / (1024L * 1024L));
+                info.put("batteryPercent", batteryPercent);
+                info.put("charging", charging);
+                return info.toString();
+            } catch (Exception error) {
+                return "{}";
+            }
         }
     }
 }
