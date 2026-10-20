@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080812">
+<title>Headshot Sensitivity</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080812;
+ color:#fff;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:24px 18px;
+ background:linear-gradient(135deg,#10152c,#241044);
+ border-bottom:1px solid #343b75;
+}
+h1{font-size:25px;margin:0;color:#83aaff}
+header p{color:#bbb;margin-bottom:0}
+main{padding:18px}
+.card{
+ background:#121426;
+ border:1px solid #292e55;
+ border-radius:16px;
+ padding:18px;
+ margin-bottom:16px;
+}
+h2{font-size:18px;color:#a58bff;margin-top:0}
+p{color:#c7c8d8;line-height:1.5}
+button{
+ width:100%;
+ border:0;
+ border-radius:10px;
+ padding:14px;
+ margin-top:10px;
+ background:linear-gradient(90deg,#236dff,#873bff);
+ color:white;
+ font-size:15px;
+ font-weight:bold;
+}
+nav{
+ display:flex;
+ gap:8px;
+ padding:12px;
+ background:#101020;
+ position:sticky;
+ top:0;
+}
+nav button{margin:0;padding:12px 5px;font-size:12px}
+.page{display:none}
+.page.active{display:block}
+input,select{
+ width:100%;
+ padding:12px;
+ margin:8px 0;
+ border-radius:8px;
+ border:1px solid #34385c;
+ background:#090b18;
+ color:white;
+}
+.stat{font-size:24px;font-weight:bold;color:#83aaff}
+footer{text-align:center;color:#777;padding:20px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h1>HEADSHOT SENSITIVITY</h1>
+<p>Seu painel gamer de configurações</p>
+</header>
+
+<nav>
+<button onclick="showPage('home')">Início</button>
+<button onclick="showPage('sensi')">Sensi</button>
+<button onclick="showPage('diagnostico')">Diagnóstico</button>
+<button onclick="showPage('perfil')">Perfil</button>
+</nav>
+
+<main>
+<section id="home" class="page active">
+<div class="card">
+<h2>Bem-vindo, jogador!</h2>
+<p>Personalize suas configurações e consulte seu histórico em um só lugar.</p>
+<button onclick="showPage('sensi')">GERAR SENSIBILIDADE</button>
+</div>
+<div class="card">
+<h2>Recursos do aplicativo</h2>
+<p>• Gerador de sensibilidade</p>
+<p>• Diagnóstico básico do dispositivo</p>
+<p>• Perfil e configurações salvas</p>
+<p>• Histórico de gerações</p>
+</div>
+</section>
+
+<section id="sensi" class="page">
+<div class="card">
+<h2>Gerador de sensibilidade</h2>
+<label for="device">Tipo de dispositivo</label>
+<select id="device">
+<option value="equilibrado">Equilibrado</option>
+<option value="rapido">Mais rápido</option>
+<option value="preciso">Mais preciso</option>
+</select>
+<label for="level">Estilo de jogo</label>
+<select id="level">
+<option value="geral">Geral</option>
+<option value="rush">Agressivo / Rush</option>
+<option value="controle">Controle</option>
+</select>
+<button onclick="generateSensi()">GERAR CONFIGURAÇÃO</button>
+<div id="result"></div>
+</div>
+<div class="card">
+<h2>Histórico</h2>
+<div id="history">Nenhuma configuração gerada.</div>
+</div>
+</section>
+
+<section id="diagnostico" class="page">
+<div class="card">
+<h2>Diagnóstico básico</h2>
+<p>Consulte informações disponibilizadas pelo navegador do dispositivo.</p>
+<p>Nível de bateria: <span id="battery">Indisponível</span></p>
+<p>Conexão: <span id="connection">Verificando...</span></p>
+<p>Memória do navegador: <span id="memory">Indisponível</span></p>
+<button onclick="diagnose()">ATUALIZAR DIAGNÓSTICO</button>
+</div>
+</section>
+
+<section id="perfil" class="page">
+<div class="card">
+<h2>Perfil do jogador</h2>
+<label for="player">Seu apelido</label>
+<input id="player" maxlength="30" placeholder="Digite seu nick">
+<button onclick="saveProfile()">SALVAR PERFIL</button>
+<p id="profileStatus"></p>
+</div>
+<div class="card">
+<h2>Configurações</h2>
+<p>Seu perfil e histórico ficam salvos localmente neste aplicativo.</p>
+<button onclick="clearHistory()">LIMPAR HISTÓRICO</button>
+</div>
+</section>
+</main>
+
+<footer>HEADSHOT SENSITIVITY • VERSÃO 1.0</footer>
+
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ const page=document.getElementById(id);
+ if(page) page.classList.add('active');
+}
+function generateSensi(){
+ const style=document.getElementById('device').value;
+ const level=document.getElementById('level').value;
+ let base=style==='rapido'?190:style==='preciso'?145:170;
+ let values={
+  Geral:Math.min(200,base),
+  'Ponto vermelho':Math.min(200,base-10),
+  'Mira 2x':Math.min(200,base-20),
+  'Mira 4x':Math.min(200,base-30),
+  'Mira AWM':Math.min(200,base-70),
+  'Olhadinha':Math.min(200,base-15)
+ };
+ if(level==='rush'){
+  values.Geral=Math.min(200,base+10);
+  values['Ponto vermelho']=Math.min(200,base);
+ }
+ if(level==='controle'){
+  values.Geral=Math.max(50,base-15);
+  values['Mira 4x']=Math.max(50,base-40);
+ }
+ const text=Object.entries(values).map(([k,v])=>k+': '+v).join('\n');
+ document.getElementById('result').innerHTML=
+ '<div class="card"><h2>Configuração sugerida</h2><p style="white-space:pre-line">'+text+'</p><p>Use como ponto de partida e ajuste no treinamento.</p></div>';
+ const item={date:new Date().toLocaleString('pt-BR'),text};
+ let history=JSON.parse(localStorage.getItem('hs_history')||'[]');
+ history.unshift(item);
+ history=history.slice(0,10);
+ localStorage.setItem('hs_history',JSON.stringify(history));
+ renderHistory();
+}
+function renderHistory(){
+ const history=JSON.parse(localStorage.getItem('hs_history')||'[]');
+ document.getElementById('history').textContent=history.length?
+ history.map((x,i)=>(i+1)+'. '+x.date+'\n'+x.text).join('\n\n'):
+ 'Nenhuma configuração gerada.';
+}
+function saveProfile(){
+ const name=document.getElementById('player').value.trim();
+ localStorage.setItem('hs_player',name);
+ document.getElementById('profileStatus').textContent=
+ name?'Perfil salvo: '+name:'Apelido removido.';
+}
+function clearHistory(){
+ localStorage.removeItem('hs_history');
+ renderHistory();
+}
+async function diagnose(){
+ const conn=navigator.connection;
+ document.getElementById('connection').textContent=
+ conn?(conn.effectiveType||'Conectado'):'Informação indisponível';
+ document.getElementById('memory').textContent=
+ navigator.deviceMemory?navigator.deviceMemory+' GB':'Indisponível';
+ if(navigator.getBattery){
+  try{
+   const b=await navigator.getBattery();
+   document.getElementById('battery').textContent=Math.round(b.level*100)+'%';
+  }catch(e){}
+ }else{
+  document.getElementById('battery').textContent='Indisponível';
+ }
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.getElementById('player').value=localStorage.getItem('hs_player')||'';
+ renderHistory();
+ diagnose();
+});
+</script>
+</body>
+</html>
