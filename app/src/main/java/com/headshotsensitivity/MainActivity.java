@@ -6,69 +6,196 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.BatteryManager;
 import android.os.Build;
+import android.os.CancellationSignal;
 import android.util.DisplayMetrics;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
 import android.webkit.JavascriptInterface;
 import android.graphics.Color;
-import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.credentials.ClearCredentialStateRequest;
+import androidx.credentials.Credential;
+import androidx.credentials.CredentialManager;
+import androidx.credentials.CustomCredential;
+import androidx.credentials.GetCredentialRequest;
+import androidx.credentials.GetCredentialResponse;
+import androidx.credentials.exceptions.ClearCredentialException;
+import androidx.credentials.exceptions.GetCredentialException;
+import androidx.credentials.exceptions.GetCredentialCancellationException;
+import androidx.credentials.exceptions.NoCredentialException;
+import androidx.credentials.CredentialManagerCallback;
+
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption;
+import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential;
+import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException;
+
 import org.json.JSONObject;
 
 public class MainActivity extends Activity {
-
     private WebView webView;
+    private DeviceBridge deviceBridge;
+    private CredentialManager credentialManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getWindow().setStatusBarColor(Color.rgb(5, 5, 5));
         getWindow().setNavigationBarColor(Color.rgb(5, 5, 5));
         getWindow().getDecorView().setSystemUiVisibility(0);
+        credentialManager = CredentialManager.create(this);
 
         FrameLayout layout = new FrameLayout(this);
         layout.setBackgroundColor(Color.rgb(5, 5, 5));
-
         webView = new WebView(this);
         webView.setBackgroundColor(Color.rgb(5, 5, 5));
-
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setDefaultTextEncodingName("UTF-8");
-        webView.addJavascriptInterface(new DeviceBridge(this), "AndroidDevice");
-
+        deviceBridge = new DeviceBridge(this);
+        webView.addJavascriptInterface(deviceBridge, "AndroidDevice");
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/index.html");
-
         layout.addView(webView, new FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT,
-            FrameLayout.LayoutParams.MATCH_PARENT
-        ));
-
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT));
         setContentView(layout);
+    }
+
+    private void runJs(String script) {
+        runOnUiThread(() -> {
+            if (webView != null) webView.evaluateJavascript(script, null);
+        });
     }
 
     @Override
     public void onBackPressed() {
-        if (webView != null && webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
+        if (webView != null && webView.canGoBack()) webView.goBack();
+        else super.onBackPressed();
     }
 
-    public static class DeviceBridge {
+    public final class DeviceBridge {
+        private final MainActivity activity;
         private final Context context;
+        private final SharedPreferences authPrefs;
 
-        DeviceBridge(Context context) {
-            this.context = context.getApplicationContext();
+        DeviceBridge(MainActivity activity) {
+            this.activity = activity;
+            this.context = activity.getApplicationContext();
+            this.authPrefs = context.getSharedPreferences("google_session", Context.MODE_PRIVATE);
+        }
+
+        @JavascriptInterface
+        public boolean isGoogleSignedIn() {
+            return authPrefs.contains("email");
+        }
+
+        @JavascriptInterface
+        public String getGoogleAccount() {
+            try {
+                JSONObject account = new JSONObject();
+                account.put("signedIn", isGoogleSignedIn());
+                account.put("name", authPrefs.getString("name", ""));
+                account.put("email", authPrefs.getString("email", ""));
+                return account.toString();
+            } catch (Exception error) {
+                return "{\"signedIn\":false}";
+            }
+        }
+
+        @JavascriptInterface
+        public void signInWithGoogle() {
+            activity.runOnUiThread(() -> beginGoogleSignIn());
+        }
+
+        private void beginGoogleSignIn() {
+            try {
+                String webClientId = activity.getString(R.string.google_web_client_id);
+                GetSignInWithGoogleOption googleOption =
+                        new GetSignInWithGoogleOption.Builder(webClientId).build();
+                GetCredentialRequest request = new GetCredentialRequest.Builder()
+                        .addCredentialOption(googleOption)
+                        .build();
+                credentialManager.getCredentialAsync(
+                        activity,
+                        request,
+                        new CancellationSignal(),
+                        command -> activity.runOnUiThread(command),
+                        new CredentialManagerCallback<GetCredentialResponse, GetCredentialException>() {
+                            @Override
+                            public void onResult(GetCredentialResponse result) {
+                                handleGoogleCredential(result.getCredential());
+                            }
+
+                            @Override
+                            public void onError(GetCredentialException error) {
+                                String message;
+                                if (error instanceof GetCredentialCancellationException) {
+                                    message = "Login cancelado. Toque em Continuar com Google para tentar novamente.";
+                                } else if (error instanceof NoCredentialException) {
+                                    message = "Nenhuma conta Google foi encontrada. Adicione uma conta Google ao Android e tente novamente.";
+                                } else {
+                                    message = "Não foi possível entrar com Google. Confira o cliente OAuth Android, o pacote e a assinatura SHA-1 do APK.";
+                                }
+                                runJs("onGoogleSignInError(" + JSONObject.quote(message) + ")");
+                            }
+                        });
+            } catch (Exception error) {
+                runJs("onGoogleSignInError(\"Não foi possível iniciar o login Google. Verifique a configuração OAuth.\")");
+            }
+        }
+
+        private void handleGoogleCredential(Credential credential) {
+            if (!(credential instanceof CustomCredential)
+                    || !GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL.equals(credential.getType())) {
+                runJs("onGoogleSignInError(\"O Google retornou um tipo de credencial inesperado. Tente novamente.\")");
+                return;
+            }
+            try {
+                GoogleIdTokenCredential googleAccount =
+                        GoogleIdTokenCredential.createFrom(((CustomCredential) credential).getData());
+                String email = googleAccount.getId();
+                String name = googleAccount.getDisplayName();
+                String idToken = googleAccount.getIdToken();
+                if (email == null || email.trim().isEmpty() || idToken == null || idToken.isEmpty()) {
+                    runJs("onGoogleSignInError(\"A resposta do Google não incluiu uma conta válida.\")");
+                    return;
+                }
+                // The ID token is intentionally not persisted or exposed to JavaScript.
+                authPrefs.edit().putString("email", email).putString("name", name == null ? "" : name).apply();
+                runJs("onGoogleSignInSuccess(" + JSONObject.quote(name == null ? "" : name)
+                        + "," + JSONObject.quote(email) + ")");
+            } catch (GoogleIdTokenParsingException error) {
+                runJs("onGoogleSignInError(\"Não foi possível ler a resposta de login do Google. Atualize o Google Play Services e tente de novo.\")");
+            }
+        }
+
+        @JavascriptInterface
+        public void signOutGoogle() {
+            authPrefs.edit().clear().apply();
+            activity.runOnUiThread(() -> credentialManager.clearCredentialStateAsync(
+                    new ClearCredentialStateRequest(),
+                    new CancellationSignal(),
+                    command -> activity.runOnUiThread(command),
+                    new CredentialManagerCallback<Void, ClearCredentialException>() {
+                        @Override
+                        public void onResult(Void result) {
+                            runJs("onGoogleSignOutComplete()");
+                        }
+
+                        @Override
+                        public void onError(ClearCredentialException error) {
+                            // The local app session is cleared even if a provider cannot clear its cache.
+                            runJs("onGoogleSignOutComplete()");
+                        }
+                    }));
         }
 
         @JavascriptInterface
@@ -78,7 +205,6 @@ public class MainActivity extends Activity {
                 ActivityManager.MemoryInfo memory = new ActivityManager.MemoryInfo();
                 ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
                 if (manager != null) manager.getMemoryInfo(memory);
-
                 Intent battery = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
                 int batteryPercent = -1;
                 boolean charging = false;
@@ -90,7 +216,6 @@ public class MainActivity extends Activity {
                     charging = status == BatteryManager.BATTERY_STATUS_CHARGING
                             || status == BatteryManager.BATTERY_STATUS_FULL;
                 }
-
                 JSONObject info = new JSONObject();
                 info.put("brand", Build.BRAND);
                 info.put("manufacturer", Build.MANUFACTURER);
