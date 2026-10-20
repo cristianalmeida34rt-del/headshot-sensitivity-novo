@@ -142,7 +142,8 @@ public class MainActivity extends Activity {
                                 Log.e("HeadshotGoogle", "Credential Manager falhou: "
                                         + error.getClass().getSimpleName() + " | " + detail, error);
                                 if (error instanceof GetCredentialCancellationException) {
-                                    message = "O Google fechou a tentativa sem concluir o login. Como você escolheu uma conta, isso também pode ser uma falha OAuth, não um cancelamento manual. Confira o cliente Android (pacote e SHA-1), se os clientes Android e Web estão no mesmo projeto e se sua conta está em Usuários de teste quando o consentimento estiver em modo Teste.";
+                                    message = "O Google fechou a tentativa sem concluir o login. Como você escolheu uma conta, isso também pode ser uma falha OAuth, não um cancelamento manual. Confira o cliente Android (pacote e SHA-1), se os clientes Android e Web estão no mesmo projeto e se sua conta está em Usuários de teste quando o consentimento estiver em modo Teste."
+                                            + (detail.isEmpty() ? "" : " Detalhe técnico: " + detail);
                                 } else if (error instanceof NoCredentialException) {
                                     message = "Nenhuma conta Google compatível foi encontrada. Adicione a conta ao Android e confira a configuração OAuth.";
                                 } else {
