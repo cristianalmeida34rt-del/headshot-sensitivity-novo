@@ -1,225 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080812">
-<title>Headshot Sensitivity</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080a12"><title>Headshot Sensitivity</title>
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- background:#080812;
- color:#fff;
- font-family:Arial,sans-serif;
-}
-header{
- padding:24px 18px;
- background:linear-gradient(135deg,#10152c,#241044);
- border-bottom:1px solid #343b75;
-}
-h1{font-size:25px;margin:0;color:#83aaff}
-header p{color:#bbb;margin-bottom:0}
-main{padding:18px}
-.card{
- background:#121426;
- border:1px solid #292e55;
- border-radius:16px;
- padding:18px;
- margin-bottom:16px;
-}
-h2{font-size:18px;color:#a58bff;margin-top:0}
-p{color:#c7c8d8;line-height:1.5}
-button{
- width:100%;
- border:0;
- border-radius:10px;
- padding:14px;
- margin-top:10px;
- background:linear-gradient(90deg,#236dff,#873bff);
- color:white;
- font-size:15px;
- font-weight:bold;
-}
-nav{
- display:flex;
- gap:8px;
- padding:12px;
- background:#101020;
- position:sticky;
- top:0;
-}
-nav button{margin:0;padding:12px 5px;font-size:12px}
-.page{display:none}
-.page.active{display:block}
-input,select{
- width:100%;
- padding:12px;
- margin:8px 0;
- border-radius:8px;
- border:1px solid #34385c;
- background:#090b18;
- color:white;
-}
-.stat{font-size:24px;font-weight:bold;color:#83aaff}
-footer{text-align:center;color:#777;padding:20px;font-size:12px}
+:root{color-scheme:dark;--bg:#080a12;--panel:#111523;--line:#252d42;--muted:#a0a9bd;--blue:#42a5ff;--purple:#9b68ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#24133f 0,transparent 34%),var(--bg);color:#f5f7ff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;padding-bottom:calc(80px + env(safe-area-inset-bottom))}header{padding:24px 20px 20px;background:linear-gradient(125deg,#0e1b30,#271443);border-bottom:1px solid #303354}.brand{font-size:11px;letter-spacing:3px;color:#8c9bb5;font-weight:800}.brand b{color:var(--blue)}h1{font-size:25px;margin:8px 0 5px}header p{margin:0;color:#aab3c7;font-size:13px}nav{position:fixed;z-index:5;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));background:#0c0f19f7;border-top:1px solid var(--line)}button{font:inherit;cursor:pointer}nav button{background:transparent;border:1px solid transparent;color:#9ba5b9;border-radius:12px;padding:10px 2px;font-size:11px;font-weight:700}nav button.active{color:white;background:linear-gradient(135deg,#183a67,#332052);border-color:#354c78}main{padding:18px 16px;max-width:720px;margin:auto}.page{display:none}.page.active{display:block;animation:fade .2s}@keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}.card{background:linear-gradient(145deg,#141928,#0e121e);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:0 10px 25px #0002}.hero{padding:22px;background:linear-gradient(135deg,#112544,#21153c);border-color:#34456a}.eyebrow{color:#79baff;font-size:11px;letter-spacing:1.5px;font-weight:800}h2{font-size:17px;margin:0 0 13px}h3{font-size:14px;margin:17px 0 9px}p{color:#b4bed0;line-height:1.55;font-size:13px}.hero h2{font-size:23px;margin:8px 0}.tag{display:inline-block;border:1px solid #394b70;background:#17243c;color:#badaff;border-radius:99px;padding:6px 10px;font-size:10px;font-weight:700}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.feature{padding:14px;border-radius:14px;background:#151a29;border:1px solid var(--line)}.feature b{display:block;font-size:13px;margin-bottom:5px}.feature span,.hint{font-size:11px;line-height:1.45;color:var(--muted)}.primary,.secondary,.danger{width:100%;border:0;border-radius:12px;padding:13px 15px;margin-top:10px;font-size:13px;font-weight:800}.primary{background:linear-gradient(100deg,#1976ed,#8049ed);color:white;box-shadow:0 7px 18px #3a47ba3b}.secondary{background:#1a2233;border:1px solid #303c54;color:#dce7ff}.danger{background:#2b1720;border:1px solid #55303b;color:#ffc0cb}.inline-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.label{display:block;font-size:12px;font-weight:700;color:#c8d2e6;margin:14px 0 6px}select,input{width:100%;padding:12px 13px;border:1px solid #30384d;border-radius:11px;background:#0b0f19;color:#f5f7ff;font-size:14px;outline:none}.weapon-group{margin:12px 0}.weapons{display:flex;flex-wrap:wrap;gap:8px}.weapon{width:auto;padding:9px 11px;border-radius:12px;border:1px solid #30384d;background:#111725;color:#c0cadc;font-size:11px;font-weight:700}.weapon.selected{color:white;background:linear-gradient(135deg,#17477b,#50296e);border-color:#66a7ff}.result-box{margin-top:14px;padding:15px;border-radius:14px;background:#0b101c;border:1px solid #28364e}.result-title{display:flex;justify-content:space-between;gap:8px;align-items:center}.result-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #252b3c;font-size:13px}.result-row strong{color:#8fc4ff;font-size:16px}.statline{padding:12px 0;border-bottom:1px solid #252b3c;font-size:13px;color:#b9c3d5}.statline strong{float:right;color:#fff}.notice{padding:11px 12px;background:#101a24;border:1px solid #233b42;border-radius:12px;color:#a8dfd2;font-size:11px;line-height:1.5;margin-top:12px}.history-item{white-space:pre-wrap;font-size:12px;line-height:1.55;color:#c4cede;padding:12px 0;border-bottom:1px solid #252b3c}.empty{color:#8e98ac;font-size:12px}.profile-badge{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#1874e9,#8847df);font-size:24px;font-weight:900;margin-bottom:12px}footer{text-align:center;color:#626d81;padding:4px 15px 15px;font-size:10px}
 </style>
-</head>
-<body>
-<header>
-<h1>HEADSHOT SENSITIVITY</h1>
-<p>Seu painel gamer de configurações</p>
-</header>
-
-<nav>
-<button onclick="showPage('home')">Início</button>
-<button onclick="showPage('sensi')">Sensi</button>
-<button onclick="showPage('diagnostico')">Diagnóstico</button>
-<button onclick="showPage('perfil')">Perfil</button>
-</nav>
-
+</head><body>
+<header><div class="brand"><b>HS</b> • GAMER TOOLS</div><h1>HEADSHOT SENSITIVITY</h1><p>Seu painel de configurações para Free Fire</p></header>
+<nav aria-label="Navegação principal"><button class="active" data-page="home" onclick="showPage('home')">⌂ Início</button><button data-page="sensi" onclick="showPage('sensi')">◎ Sensi</button><button data-page="diagnostico" onclick="showPage('diagnostico')">◇ Diagnóstico</button><button data-page="perfil" onclick="showPage('perfil')">◉ Perfil</button></nav>
 <main>
-<section id="home" class="page active">
-<div class="card">
-<h2>Bem-vindo, jogador!</h2>
-<p>Personalize suas configurações e consulte seu histórico em um só lugar.</p>
-<button onclick="showPage('sensi')">GERAR SENSIBILIDADE</button>
-</div>
-<div class="card">
-<h2>Recursos do aplicativo</h2>
-<p>• Gerador de sensibilidade</p>
-<p>• Diagnóstico básico do dispositivo</p>
-<p>• Perfil e configurações salvas</p>
-<p>• Histórico de gerações</p>
-</div>
-</section>
-
-<section id="sensi" class="page">
-<div class="card">
-<h2>Gerador de sensibilidade</h2>
-<label for="device">Tipo de dispositivo</label>
-<select id="device">
-<option value="equilibrado">Equilibrado</option>
-<option value="rapido">Mais rápido</option>
-<option value="preciso">Mais preciso</option>
-</select>
-<label for="level">Estilo de jogo</label>
-<select id="level">
-<option value="geral">Geral</option>
-<option value="rush">Agressivo / Rush</option>
-<option value="controle">Controle</option>
-</select>
-<button onclick="generateSensi()">GERAR CONFIGURAÇÃO</button>
-<div id="result"></div>
-</div>
-<div class="card">
-<h2>Histórico</h2>
-<div id="history">Nenhuma configuração gerada.</div>
-</div>
-</section>
-
-<section id="diagnostico" class="page">
-<div class="card">
-<h2>Diagnóstico básico</h2>
-<p>Consulte informações disponibilizadas pelo navegador do dispositivo.</p>
-<p>Nível de bateria: <span id="battery">Indisponível</span></p>
-<p>Conexão: <span id="connection">Verificando...</span></p>
-<p>Memória do navegador: <span id="memory">Indisponível</span></p>
-<button onclick="diagnose()">ATUALIZAR DIAGNÓSTICO</button>
-</div>
-</section>
-
-<section id="perfil" class="page">
-<div class="card">
-<h2>Perfil do jogador</h2>
-<label for="player">Seu apelido</label>
-<input id="player" maxlength="30" placeholder="Digite seu nick">
-<button onclick="saveProfile()">SALVAR PERFIL</button>
-<p id="profileStatus"></p>
-</div>
-<div class="card">
-<h2>Configurações</h2>
-<p>Seu perfil e histórico ficam salvos localmente neste aplicativo.</p>
-<button onclick="clearHistory()">LIMPAR HISTÓRICO</button>
-</div>
-</section>
-</main>
-
-<footer>HEADSHOT SENSITIVITY • VERSÃO 1.0</footer>
-
+<section id="home" class="page active"><div class="card hero"><span class="eyebrow">CENTRAL DO JOGADOR</span><h2 id="welcome">Sua próxima configuração começa aqui.</h2><p>Crie sugestões para testar no treinamento, escolha uma arma e ajuste ao seu jeito de jogar.</p><span class="tag">CONFIGURAÇÕES LOCAIS • SEM PROMESSAS DE FPS</span><button class="primary" onclick="showPage('sensi')">ABRIR GERADOR DE SENSI</button></div><div class="grid"><div class="feature"><b>Gerador</b><span>Perfis por estilo e arma.</span></div><div class="feature"><b>Histórico</b><span>Últimas sugestões neste aparelho.</span></div><div class="feature"><b>Diagnóstico</b><span>Somente dados acessíveis.</span></div><div class="feature"><b>Perfil</b><span>Apelido salvo localmente.</span></div></div><div class="card" style="margin-top:14px"><h2>Feito para você ajustar</h2><p>Valores de partida, não configurações oficiais. O app não altera controles internos do Free Fire.</p></div></section>
+<section id="sensi" class="page"><div class="card"><span class="eyebrow">AJUSTES PERSONALIZADOS</span><h2 style="margin-top:7px">Gerador de sensibilidade</h2><label class="label" for="device">Perfil de resposta</label><select id="device"><option value="equilibrado">Equilibrado</option><option value="rapido">Rápido</option><option value="preciso">Preciso</option></select><label class="label" for="level">Estilo de jogo</label><select id="level"><option value="geral">Versátil</option><option value="rush">Agressivo / Rush</option><option value="controle">Controle</option></select><h3>Escolha uma arma</h3><div class="weapon-group"><div class="hint">RIFIS</div><div class="weapons"><button class="weapon selected" data-weapon="Geral" onclick="selectWeapon(this)">Geral</button><button class="weapon" data-weapon="SCAR" onclick="selectWeapon(this)">SCAR</button><button class="weapon" data-weapon="AK" onclick="selectWeapon(this)">AK</button><button class="weapon" data-weapon="M4A1" onclick="selectWeapon(this)">M4A1</button></div></div><div class="weapon-group"><div class="hint">SUBMETRALHADORAS / CURTO ALCANCE</div><div class="weapons"><button class="weapon" data-weapon="MP40" onclick="selectWeapon(this)">MP40</button><button class="weapon" data-weapon="UMP" onclick="selectWeapon(this)">UMP</button><button class="weapon" data-weapon="M1887" onclick="selectWeapon(this)">M1887</button></div></div><div class="weapon-group"><div class="hint">PRECISÃO</div><div class="weapons"><button class="weapon" data-weapon="AWM" onclick="selectWeapon(this)">AWM</button><button class="weapon" data-weapon="Desert Eagle" onclick="selectWeapon(this)">Desert Eagle</button></div></div><p class="hint">A arma selecionada influencia os valores sugeridos; não é uma configuração oficial.</p><button class="primary" onclick="generateSensi()">GERAR CONFIGURAÇÃO</button><div id="result" aria-live="polite"></div></div><div class="card"><div class="result-title"><h2 style="margin:0">Histórico recente</h2><span class="tag">ATÉ 10</span></div><div id="history" style="margin-top:8px"></div><button class="danger" onclick="clearHistory()">LIMPAR HISTÓRICO</button></div></section>
+<section id="diagnostico" class="page"><div class="card"><span class="eyebrow">INFORMAÇÕES DO APARELHO</span><h2 style="margin-top:7px">Diagnóstico básico</h2><p>Somente dados disponibilizados pelo Android WebView. FPS, DPI e desempenho do jogo não são medidos.</p><div class="statline">Bateria <strong id="battery">Indisponível</strong></div><div class="statline">Conexão <strong id="connection">Verificando…</strong></div><div class="statline">Memória exposta pelo navegador <strong id="memory">Indisponível</strong></div><button class="secondary" onclick="diagnose()">ATUALIZAR DIAGNÓSTICO</button><div class="notice">Este aplicativo não acessa nem altera as configurações internas do Free Fire.</div></div></section>
+<section id="perfil" class="page"><div class="card"><div class="profile-badge" id="avatar">?</div><span class="eyebrow">SEU ESPAÇO</span><h2 style="margin-top:7px">Perfil do jogador</h2><label class="label" for="player">Seu apelido</label><input id="player" maxlength="30" placeholder="Digite seu nick"><button class="primary" onclick="saveProfile()">SALVAR PERFIL</button><p id="profileStatus" aria-live="polite"></p></div><div class="card"><h2>Seus dados</h2><p>Apelido e histórico são mantidos localmente. Limpar histórico não apaga seu apelido.</p><button class="danger" onclick="clearHistory()">LIMPAR HISTÓRICO</button></div></section>
+</main><footer>HEADSHOT SENSITIVITY • VERSÃO 1.1</footer>
 <script>
-function showPage(id){
- document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
- const page=document.getElementById(id);
- if(page) page.classList.add('active');
-}
-function generateSensi(){
- const style=document.getElementById('device').value;
- const level=document.getElementById('level').value;
- let base=style==='rapido'?190:style==='preciso'?145:170;
- let values={
-  Geral:Math.min(200,base),
-  'Ponto vermelho':Math.min(200,base-10),
-  'Mira 2x':Math.min(200,base-20),
-  'Mira 4x':Math.min(200,base-30),
-  'Mira AWM':Math.min(200,base-70),
-  'Olhadinha':Math.min(200,base-15)
- };
- if(level==='rush'){
-  values.Geral=Math.min(200,base+10);
-  values['Ponto vermelho']=Math.min(200,base);
- }
- if(level==='controle'){
-  values.Geral=Math.max(50,base-15);
-  values['Mira 4x']=Math.max(50,base-40);
- }
- const text=Object.entries(values).map(([k,v])=>k+': '+v).join('\n');
- document.getElementById('result').innerHTML=
- '<div class="card"><h2>Configuração sugerida</h2><p style="white-space:pre-line">'+text+'</p><p>Use como ponto de partida e ajuste no treinamento.</p></div>';
- const item={date:new Date().toLocaleString('pt-BR'),text};
- let history=JSON.parse(localStorage.getItem('hs_history')||'[]');
- history.unshift(item);
- history=history.slice(0,10);
- localStorage.setItem('hs_history',JSON.stringify(history));
- renderHistory();
-}
-function renderHistory(){
- const history=JSON.parse(localStorage.getItem('hs_history')||'[]');
- document.getElementById('history').textContent=history.length?
- history.map((x,i)=>(i+1)+'. '+x.date+'\n'+x.text).join('\n\n'):
- 'Nenhuma configuração gerada.';
-}
-function saveProfile(){
- const name=document.getElementById('player').value.trim();
- localStorage.setItem('hs_player',name);
- document.getElementById('profileStatus').textContent=
- name?'Perfil salvo: '+name:'Apelido removido.';
-}
-function clearHistory(){
- localStorage.removeItem('hs_history');
- renderHistory();
-}
-async function diagnose(){
- const conn=navigator.connection;
- document.getElementById('connection').textContent=
- conn?(conn.effectiveType||'Conectado'):'Informação indisponível';
- document.getElementById('memory').textContent=
- navigator.deviceMemory?navigator.deviceMemory+' GB':'Indisponível';
- if(navigator.getBattery){
-  try{
-   const b=await navigator.getBattery();
-   document.getElementById('battery').textContent=Math.round(b.level*100)+'%';
-  }catch(e){}
- }else{
-  document.getElementById('battery').textContent='Indisponível';
- }
-}
-document.addEventListener('DOMContentLoaded',()=>{
- document.getElementById('player').value=localStorage.getItem('hs_player')||'';
- renderHistory();
- diagnose();
-});
-</script>
-</body>
-</html>
+'use strict';let selectedWeapon='Geral';function safeGet(k,d){try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}}function safeSet(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}function readHistory(){try{const v=JSON.parse(safeGet('hs_history','[]'));return Array.isArray(v)?v:[]}catch(e){return []}}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const page=document.getElementById(id);if(page)page.classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='diagnostico')diagnose();window.scrollTo(0,0)}function selectWeapon(b){document.querySelectorAll('.weapon').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');selectedWeapon=b.dataset.weapon}function escapeHTML(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function generateSensi(){let base={rapido:190,preciso:145,equilibrado:170}[document.getElementById('device').value];const level=document.getElementById('level').value;const mods={Geral:0,SCAR:-2,AK:-8,M4A1:2,MP40:8,UMP:3,M1887:5,AWM:-24,'Desert Eagle':-10};base+=mods[selectedWeapon]||0;if(level==='rush')base+=8;if(level==='controle')base-=8;const clamp=v=>Math.max(50,Math.min(200,v));const values={'Geral':clamp(base),'Ponto vermelho':clamp(base-10),'Mira 2x':clamp(base-20),'Mira 4x':clamp(base-32),'Mira AWM':clamp(base-68),'Olhadinha':clamp(base-15)};const text=Object.entries(values).map(([k,v])=>k+': '+v).join('\n');document.getElementById('result').innerHTML='<div class="result-box"><div class="result-title"><h2 style="margin:0">Sugestão • '+escapeHTML(selectedWeapon)+'</h2><span class="tag">TESTE NO TREINO</span></div>'+Object.entries(values).map(([k,v])=>'<div class="result-row"><span>'+escapeHTML(k)+'</span><strong>'+v+'</strong></div>').join('')+'<p class="hint">Ponto de partida para ajustar manualmente.</p><div class="inline-actions"><button class="secondary" onclick="copyResult()">COPIAR VALORES</button><button class="secondary" onclick="generateSensi()">GERAR OUTRA</button></div><div id="copyStatus" class="hint" aria-live="polite"></div></div>';const history=readHistory();history.unshift({date:new Date().toLocaleString('pt-BR'),weapon:selectedWeapon,text});if(!safeSet('hs_history',JSON.stringify(history.slice(0,10))))toast('Não foi possível salvar neste dispositivo.');renderHistory()}
+function toast(t){const s=document.getElementById('copyStatus');if(s)s.textContent=t}async function copyResult(){const h=readHistory(),text=h.length?h[0].text:'';const s=document.getElementById('copyStatus');if(!text){if(s)s.textContent='Gere uma configuração primeiro.';return}try{if(navigator.clipboard&&navigator.clipboard.writeText)await navigator.clipboard.writeText(text);else{const f=document.createElement('textarea');f.value=text;f.style.position='fixed';document.body.appendChild(f);f.select();const ok=document.execCommand('copy');f.remove();if(!ok)throw Error('copy')}if(s)s.textContent='Valores copiados.'}catch(e){if(s)s.textContent='Não foi possível copiar. Consulte o histórico.'}}
+function renderHistory(){const c=document.getElementById('history');if(!c)return;const h=readHistory();c.innerHTML=h.length?h.map(x=>'<div class="history-item"><strong>'+escapeHTML(x.date||'')+' • '+escapeHTML(x.weapon||'Geral')+'</strong>\n'+escapeHTML(x.text||'')+'</div>').join(''):'<p class="empty">Nenhuma configuração gerada ainda.</p>'}function saveProfile(){const n=document.getElementById('player').value.trim(),s=document.getElementById('profileStatus');if(!safeSet('hs_player',n)){s.textContent='Não foi possível salvar neste dispositivo.';return}s.textContent=n?'Perfil salvo: '+n:'Apelido removido.';updateAvatar(n)}function updateAvatar(n){document.getElementById('avatar').textContent=n?Array.from(n)[0].toUpperCase():'?';document.getElementById('welcome').textContent=n?'Bem-vindo, '+n+'!':'Sua próxima configuração começa aqui.'}
+function clearHistory(){if(!readHistory().length){renderHistory();return}if(confirm('Apagar todas as configurações do histórico?')){try{localStorage.removeItem('hs_history')}catch(e){}renderHistory();document.getElementById('result').innerHTML=''}}async function diagnose(){const c=document.getElementById('connection'),m=document.getElementById('memory'),b=document.getElementById('battery');if(!c)return;const conn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;c.textContent=conn?(conn.effectiveType||conn.type||'Conectado'):'Indisponível neste WebView';m.textContent=navigator.deviceMemory?navigator.deviceMemory+' GB (estimado pelo navegador)':'Indisponível neste WebView';if(navigator.getBattery){try{const x=await navigator.getBattery();b.textContent=Math.round(x.level*100)+'%'+(x.charging?' • carregando':'')}catch(e){b.textContent='Indisponível neste WebView'}}else b.textContent='Indisponível neste WebView'}document.addEventListener('DOMContentLoaded',()=>{const n=safeGet('hs_player','');document.getElementById('player').value=n;updateAvatar(n);renderHistory();diagnose()});
+</script></body></html>
