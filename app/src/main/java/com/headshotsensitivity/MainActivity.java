@@ -13,6 +13,7 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
@@ -136,12 +137,18 @@ public class MainActivity extends Activity {
                             @Override
                             public void onError(GetCredentialException error) {
                                 String message;
+                                String detail = error.getMessage() == null ? "" : error.getMessage().trim();
+                                if (detail.length() > 240) detail = detail.substring(0, 240);
+                                Log.e("HeadshotGoogle", "Credential Manager falhou: "
+                                        + error.getClass().getSimpleName() + " | " + detail, error);
                                 if (error instanceof GetCredentialCancellationException) {
-                                    message = "Login cancelado. Toque em Continuar com Google para tentar novamente.";
+                                    message = "O Google fechou a tentativa sem concluir o login. Como você escolheu uma conta, isso também pode ser uma falha OAuth, não um cancelamento manual. Confira o cliente Android (pacote e SHA-1), se os clientes Android e Web estão no mesmo projeto e se sua conta está em Usuários de teste quando o consentimento estiver em modo Teste.";
                                 } else if (error instanceof NoCredentialException) {
-                                    message = "Nenhuma conta Google foi encontrada. Adicione uma conta Google ao Android e tente novamente.";
+                                    message = "Nenhuma conta Google compatível foi encontrada. Adicione a conta ao Android e confira a configuração OAuth.";
                                 } else {
-                                    message = "Não foi possível entrar com Google. Confira o cliente OAuth Android, o pacote e a assinatura SHA-1 do APK.";
+                                    message = "Erro Google " + error.getClass().getSimpleName()
+                                            + (detail.isEmpty() ? "" : ": " + detail)
+                                            + ". Confira os clientes OAuth Android/Web e a conta de teste.";
                                 }
                                 runJs("onGoogleSignInError(" + JSONObject.quote(message) + ")");
                             }
