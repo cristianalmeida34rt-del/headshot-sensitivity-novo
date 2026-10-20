@@ -28,15 +28,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().setStatusBarColor(Color.rgb(8, 8, 18));
-        getWindow().setNavigationBarColor(Color.rgb(8, 8, 18));
+        getWindow().setStatusBarColor(Color.rgb(5, 5, 5));
+        getWindow().setNavigationBarColor(Color.rgb(5, 5, 5));
         getWindow().getDecorView().setSystemUiVisibility(0);
 
         FrameLayout layout = new FrameLayout(this);
-        layout.setBackgroundColor(Color.rgb(8, 8, 18));
+        layout.setBackgroundColor(Color.rgb(5, 5, 5));
 
         webView = new WebView(this);
-        webView.setBackgroundColor(Color.rgb(8, 8, 18));
+        webView.setBackgroundColor(Color.rgb(5, 5, 5));
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -92,7 +92,9 @@ public class MainActivity extends Activity {
                 }
 
                 JSONObject info = new JSONObject();
-                info.put("model", Build.MANUFACTURER + " " + Build.MODEL);
+                info.put("brand", Build.BRAND);
+                info.put("manufacturer", Build.MANUFACTURER);
+                info.put("model", Build.MODEL);
                 info.put("androidVersion", Build.VERSION.RELEASE);
                 info.put("sdk", Build.VERSION.SDK_INT);
                 info.put("screenWidth", display.widthPixels);
