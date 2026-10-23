@@ -111,6 +111,22 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public boolean shareText(String title, String text) {
+            try {
+                Intent send = new Intent(Intent.ACTION_SEND);
+                send.setType("text/plain");
+                send.putExtra(Intent.EXTRA_SUBJECT, title);
+                send.putExtra(Intent.EXTRA_TEXT, text);
+                Intent chooser = Intent.createChooser(send, title);
+                chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(chooser);
+                return true;
+            } catch (Exception error) {
+                return false;
+            }
+        }
+
+        @JavascriptInterface
         public boolean openOfficialUrl(String url) {
             try {
                 Uri uri = Uri.parse(url);
