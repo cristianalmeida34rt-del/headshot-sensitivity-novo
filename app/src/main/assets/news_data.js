@@ -21,5 +21,4 @@ window.FF_NEWS = [
     url: 'https://ff.garena.com/en/article/1701/'
   }
 ];
-window.FF_NEWS_CHECKED = '20/10/2026';
 window.FF_OFFICIAL_NEWS = 'https://ff.garena.com/en/news/';
