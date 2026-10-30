@@ -27,7 +27,7 @@ jobs:
         id: stable-signing-cache
         uses: actions/cache@v4
         with:
-          path: .android/debug.keystore
+          path: ${{ github.workspace }}/.android/debug.keystore
           key: headshot-debug-keystore-v2-${{ runner.os }}
 
       - name: Impedir atualização incompatível
