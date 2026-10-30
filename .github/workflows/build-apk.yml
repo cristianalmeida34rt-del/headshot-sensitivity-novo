@@ -24,17 +24,22 @@ jobs:
           packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
       - name: Aceitar licenças do Android SDK
         run: yes | sdkmanager --licenses || true
-      - name: Restaurar assinatura estável do APK de teste
+      - name: Restaurar chave persistente do APK
+        id: stable-signing-cache
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.android/debug.keystore
           key: headshot-debug-keystore-v2-${{ runner.os }}
-      - name: Preparar assinatura estável do APK de teste
+      - name: Validar chave de assinatura persistente
+        env:
+          CACHE_HIT: ${{ steps.stable-signing-cache.outputs.cache-hit }}
         run: |
-          mkdir -p .android
-          if [ ! -f .android/debug.keystore ]; then
-            keytool -genkeypair -v -keystore .android/debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 10000
+          set -euo pipefail
+          if [[ "$CACHE_HIT" != "true" || ! -s .android/debug.keystore ]]; then
+            echo "::error::A chave estável não foi recuperada; build interrompido para não criar uma assinatura incompatível."
+            exit 1
           fi
+          bash scripts/verify_apk_signing.sh --keystore .android/debug.keystore
       - name: Conferir AndroidManifest
         run: |
           echo "===== INICIO DO MANIFEST ====="
@@ -42,6 +47,8 @@ jobs:
           echo "===== FIM DO MANIFEST ====="
       - name: Compilar APK
         run: gradle assembleDebug --stacktrace
+      - name: Validar assinatura do APK gerado
+        run: bash scripts/verify_apk_signing.sh --apk app/build/outputs/apk/debug/app-debug.apk
       - name: Publicar APK
         uses: actions/upload-artifact@v4
         with:
