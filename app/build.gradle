@@ -29,7 +29,7 @@ android {
         applicationId 'com.headshotsensitivity'
         minSdk 23
         targetSdk 35
-        versionCode 10
-        versionName '2.3.2'
+        versionCode 11
+        versionName '2.3.3'
     }
 }
