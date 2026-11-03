@@ -45,7 +45,7 @@
       angle: random(0, Math.PI * 2),
       spin: random(-0.35, 0.35),
       trail: random(45, 105),
-      tint: Math.random() < 0.5 ? '120,188,255' : '193,157,255',
+      tint: Math.random() < 0.58 ? '255,166,69' : '255,104,52',
       glow: random(0.48, 0.82)
     };
   }
@@ -83,7 +83,7 @@
     const tail = ctx.createLinearGradient(0, -rock.trail, 0, rock.radius * 0.2);
     tail.addColorStop(0, `rgba(${rock.tint},0)`);
     tail.addColorStop(0.65, `rgba(${rock.tint},${rock.glow * 0.16})`);
-    tail.addColorStop(1, `rgba(225,239,255,${rock.glow * 0.52})`);
+    tail.addColorStop(1, `rgba(255,226,163,${rock.glow * 0.78})`);
     ctx.strokeStyle = tail;
     ctx.lineWidth = Math.max(1.3, rock.radius * 0.4);
     ctx.beginPath();
@@ -92,14 +92,14 @@
     ctx.stroke();
 
     const body = ctx.createRadialGradient(-rock.radius * 0.32, -rock.radius * 0.35, 0.3, 0, 0, rock.radius * 1.25);
-    body.addColorStop(0, '#eef5ff');
-    body.addColorStop(0.33, '#9aabc9');
-    body.addColorStop(0.78, '#586789');
-    body.addColorStop(1, '#202a42');
+    body.addColorStop(0, '#fff0d8');
+    body.addColorStop(0.33, '#c2aa91');
+    body.addColorStop(0.78, '#75604f');
+    body.addColorStop(1, '#352a3c');
     ctx.shadowColor = `rgba(${rock.tint},${rock.glow})`;
     ctx.shadowBlur = rock.radius * 1.5;
     ctx.fillStyle = body;
-    ctx.strokeStyle = `rgba(205,226,255,${rock.glow * 0.43})`;
+    ctx.strokeStyle = `rgba(255,226,190,${rock.glow * 0.64})`;
     ctx.lineWidth = 0.65;
     ctx.beginPath();
     rock.points.forEach((point, index) => {
@@ -113,7 +113,7 @@
     ctx.stroke();
     ctx.shadowBlur = 0;
 
-    ctx.strokeStyle = 'rgba(21,31,52,.7)';
+    ctx.strokeStyle = 'rgba(45,30,32,.78)';
     rock.craters.forEach((crater) => {
       const x = Math.cos(crater.angle) * crater.distance;
       const y = Math.sin(crater.angle) * crater.distance;
@@ -133,7 +133,7 @@
         star.x = random(0, width);
       }
       const flicker = staticOnly ? 0.78 : 0.58 + Math.sin(elapsed * star.twinkle + star.phase) * 0.24;
-      ctx.fillStyle = `rgba(191,219,255,${Math.max(0.08, star.alpha * flicker)})`;
+      ctx.fillStyle = `rgba(255,224,246,${Math.max(0.08, star.alpha * flicker)})`;
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
       ctx.fill();
