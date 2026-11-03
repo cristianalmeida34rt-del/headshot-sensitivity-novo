@@ -66,3 +66,44 @@ footer{color:#c1b1d0;border-color:rgba(196,160,223,.24)}
 @keyframes heroAsteroidFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-7px) rotate(3deg)}}
 @media(min-width:600px){.hero{padding:22px}.hero::after{width:155px;height:155px;right:8px;top:8px}}
 @media(prefers-reduced-motion:reduce){.hero::after{animation:none!important}#cosmicCanvas{opacity:.3}}
+
+/* Cinematic orbital launch sequence inspired by the supplied reference video. */
+.entry-cinematic{background-image:linear-gradient(rgba(20,12,39,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(20,12,39,.28) 1px,transparent 1px),linear-gradient(180deg,rgba(13,7,29,.24),rgba(13,7,29,.47) 44%,rgba(12,7,25,.76)),url('galaxy-cartoon-splash-optimized.jpg');background-size:38px 38px,38px 38px,cover,cover;background-position:center,center,center,center;background-repeat:repeat,repeat,no-repeat,no-repeat}
+.entry-cinematic .startup-logo{animation:entryCore 1.9s cubic-bezier(.45,0,.55,1) both;transform-origin:50% 50%}
+.entry-cinematic .startup-title,.entry-cinematic .startup-subtitle,.entry-cinematic .loading-track{opacity:0;transform:translateY(10px)}
+.entry-cinematic .emblem-orbit-a{animation:entryRingA 3.2s linear infinite}
+.entry-cinematic .emblem-orbit-b{animation:entryRingB 4.4s linear infinite}
+.entry-cinematic .startup-emblem::before,.entry-cinematic .startup-emblem::after{content:"";position:absolute;inset:-17px;border:1.5px solid transparent;border-radius:19px;opacity:0;pointer-events:none}
+.entry-cinematic .startup-emblem::before{border-top-color:#ffd36b;border-left-color:#ffd36b;animation:targetSnap .45s 1.34s cubic-bezier(.16,1,.3,1) forwards}
+.entry-cinematic .startup-emblem::after{inset:-17px;border-right-color:#ff8a49;border-bottom-color:#ff8a49;animation:targetSnap .45s 1.42s cubic-bezier(.16,1,.3,1) forwards}
+.entry-comet{position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;opacity:0;background:radial-gradient(circle at 35% 30%,#fff4ce 0 12%,#ffd065 35%,#f27745 100%);box-shadow:0 0 10px 4px rgba(255,174,73,.62),0 0 27px 9px rgba(255,107,63,.24);z-index:3}
+.entry-comet::after{content:"";position:absolute;width:58px;height:2px;right:4px;top:4px;transform:rotate(-28deg);transform-origin:right;background:linear-gradient(90deg,transparent,rgba(255,132,69,.14),rgba(255,217,128,.85));filter:blur(.4px)}
+.entry-comet--a{animation:cometOrbitA 2.1s .25s ease-in-out infinite}
+.entry-comet--b{width:6px;height:6px;animation:cometOrbitB 2.8s .55s ease-in-out infinite}
+.entry-target{position:absolute;inset:-28px;border-radius:50%;border:1px solid rgba(255,198,98,.3);opacity:0;z-index:0}
+.entry-impact .entry-target{animation:impactPulse .75s ease-out both}
+.entry-flare{position:absolute;z-index:5;left:-35%;top:calc(50% - 1px);width:170%;height:2px;opacity:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,177,73,.25) 34%,#fff2c4 50%,rgba(255,126,62,.7) 57%,transparent);box-shadow:0 0 15px 4px rgba(255,171,72,.34)}
+.entry-impact .entry-flare{animation:lensFlash .72s cubic-bezier(.16,1,.3,1) both}
+.entry-burst{position:absolute;z-index:4;left:50%;top:calc(50% - 46px);width:1px;height:1px;pointer-events:none}.entry-burst::before{content:"";position:absolute;left:-9px;top:-9px;width:18px;height:18px;border:2px solid rgba(255,220,142,.9);border-radius:50%;box-shadow:0 0 15px 5px rgba(255,151,61,.48);opacity:0}
+.entry-burst i{position:absolute;display:block;width:var(--sz,5px);height:var(--sz,5px);border-radius:45% 55% 62% 38%;background:linear-gradient(135deg,#fff0b1,#ff9b4d 55%,#9c5b55);box-shadow:0 0 5px rgba(255,180,82,.66);opacity:0;--angle:calc(var(--n)*16.36deg);--distance:var(--distance,72px);transform:rotate(var(--angle)) translateY(0) scale(.2)}
+.entry-burst i:nth-child(3n){--sz:8px}.entry-burst i:nth-child(4n){--sz:4px}.entry-impact .entry-burst::before{animation:burstRing .72s ease-out both}.entry-impact .entry-burst i{animation:debrisBurst .78s calc(.02s + var(--n)*.008s) cubic-bezier(.12,.62,.35,1) both}
+.entry-brand .startup-title,.entry-brand .startup-subtitle,.entry-brand .loading-track{animation:brandResolve .55s cubic-bezier(.16,1,.3,1) both}
+.entry-brand .startup-logo{animation:logoLock .48s cubic-bezier(.16,1,.3,1) both}
+.entry-brand .startup-subtitle{animation-delay:.1s}.entry-brand .loading-track{animation-delay:.16s}
+.entry-cinematic .loading-track span{animation:entryProgress 2.7s cubic-bezier(.22,.72,.18,1) both}
+.entry-exit{animation:splashDissolve .42s ease-in both;pointer-events:none}
+@keyframes entryCore{0%{opacity:0;transform:rotate(-100deg) scale(.12);filter:blur(5px)}55%{opacity:1;transform:rotate(18deg) scale(1.12);filter:blur(0)}100%{transform:rotate(0) scale(1)}}
+@keyframes entryRingA{from{transform:rotateX(67deg) rotateZ(-23deg)}to{transform:rotateX(67deg) rotateZ(337deg)}}
+@keyframes entryRingB{from{transform:rotateX(68deg) rotateZ(22deg)}to{transform:rotateX(68deg) rotateZ(-338deg)}}
+@keyframes cometOrbitA{0%,100%{opacity:.25;transform:rotate(0deg) translateX(54px) scale(.75)}50%{opacity:1;transform:rotate(180deg) translateX(54px) scale(1.2)}}
+@keyframes cometOrbitB{0%,100%{opacity:.12;transform:rotate(190deg) translateX(67px) scale(.7)}50%{opacity:.9;transform:rotate(10deg) translateX(67px) scale(1.1)}}
+@keyframes targetSnap{0%{opacity:0;transform:scale(1.38)}70%{opacity:.95;transform:scale(.94)}100%{opacity:.8;transform:scale(1)}}
+@keyframes impactPulse{0%{opacity:.9;transform:scale(.36);box-shadow:0 0 0 0 rgba(255,196,94,.35)}100%{opacity:0;transform:scale(1.8);box-shadow:0 0 0 28px rgba(255,196,94,0)}}
+@keyframes lensFlash{0%{opacity:0;transform:scaleX(.12)}30%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1.15)}}
+@keyframes burstRing{0%{opacity:.95;transform:scale(.35)}100%{opacity:0;transform:scale(11)}}
+@keyframes debrisBurst{0%{opacity:0;transform:rotate(var(--angle)) translateY(0) scale(.35)}14%{opacity:1}72%{opacity:.9}100%{opacity:0;transform:rotate(var(--angle)) translateY(calc(-1 * var(--distance))) scale(.12)}}
+@keyframes brandResolve{0%{opacity:0;transform:translateY(12px);filter:blur(5px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes logoLock{0%{transform:scale(1.25);filter:brightness(1.8)}70%{transform:scale(.94)}100%{transform:scale(1);filter:brightness(1)}}
+@keyframes entryProgress{0%{width:3%;transform:translateX(0)}72%{width:82%;transform:translateX(0)}100%{width:100%;transform:translateX(0)}}
+@keyframes splashDissolve{to{opacity:0;visibility:hidden;transform:scale(1.025);filter:blur(3px)}}
+@media(prefers-reduced-motion:reduce){.entry-cinematic .startup-title,.entry-cinematic .startup-subtitle,.entry-cinematic .loading-track{opacity:1!important;transform:none!important}.entry-cinematic .startup-logo,.entry-cinematic .emblem-orbit-a,.entry-cinematic .emblem-orbit-b,.entry-comet,.entry-impact .entry-target,.entry-impact .entry-flare,.entry-impact .entry-burst::before,.entry-impact .entry-burst i,.entry-brand .startup-title,.entry-brand .startup-subtitle,.entry-brand .loading-track,.entry-brand .startup-logo,.entry-exit{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}}
