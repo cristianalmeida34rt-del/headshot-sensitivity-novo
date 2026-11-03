@@ -25,8 +25,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setStatusBarColor(Color.rgb(5, 5, 5));
-        getWindow().setNavigationBarColor(Color.rgb(5, 5, 5));
+        getWindow().setStatusBarColor(Color.rgb(5, 8, 23));
+        getWindow().setNavigationBarColor(Color.rgb(5, 8, 23));
         getWindow().getDecorView().setSystemUiVisibility(0);
 
         // Apaga os dados locais de sessão Google criados por versões antigas do app.
