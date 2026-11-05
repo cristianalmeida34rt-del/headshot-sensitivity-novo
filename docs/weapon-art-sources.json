@@ -1,0 +1,1428 @@
+{
+  "title": "Headshot Sensitivity — fontes da arte do arsenal",
+  "note": "Arte de Free Fire pertence aos respectivos titulares, incluindo Garena; uso referencial em app independente, sem afiliação/endosso. A lista distingue nomes alternativos e reutilização de arte.",
+  "source_pages": [
+    "https://ff.garena.com/en/weapons/",
+    "https://ff.garena.com/en/weapons/18/",
+    "https://ff.garena.com/en/weapons/35/",
+    "https://ff.garena.com/en/weapons/52/",
+    "https://ff.garena.com/en/weapons/69/",
+    "https://ff.garena.com/en/weapons/86/",
+    "https://ff.garena.com/en/weapons/103/",
+    "https://ff.garena.com/en/weapons/120/",
+    "https://ff.garena.com/en/weapons/137/",
+    "https://ff.garena.com/en/weapons/154/",
+    "https://ff.garena.com/en/weapons/171/",
+    "https://ff.garena.com/en/weapons/188/",
+    "https://ff.garena.com/en/article/1332/",
+    "https://freefire.fandom.com/wiki/File:G36.png"
+  ],
+  "assets": [
+    {
+      "asset": "ak47",
+      "source_file": "garena-ak47.webp",
+      "source_name": "AK47",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/bc3a04e98225ef35976771ad109d4ee6.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "an94",
+      "source_file": "garena-an94.webp",
+      "source_name": "AN94",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/6e18ff1a4fdc4cbd9650f62b7d5bbd1a.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "aug",
+      "source_file": "garena-aug.webp",
+      "source_name": "AUG",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/fc7eb3fd85c623b2c999a7958feb86e7.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "famas",
+      "source_file": "garena-famas.webp",
+      "source_name": "FAMAS",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0516690dac28178d6baf02644a0980f9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "g36",
+      "source_file": "wiki-g36.webp",
+      "source_name": "G36",
+      "source_url": "https://freefire.fandom.com/wiki/File:G36.png",
+      "source_kind": "community"
+    },
+    {
+      "asset": "groza",
+      "source_file": "garena-groza.webp",
+      "source_name": "Groza",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c49e5145e37a5c66b1202e04031f6363.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "plasma",
+      "source_file": "garena-plasma.webp",
+      "source_name": "Plasma",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c824bf1a7bbffed3f77588e051ff2f70.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "kingfisher",
+      "source_file": "garena-kingfisher.webp",
+      "source_name": "Kingfisher",
+      "source_url": "https://ff.garena.com/en/weapons/",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m4a1",
+      "source_file": "garena-m4a1.webp",
+      "source_name": "M4A1",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f9d228799e70a11feaf2c493bedb007e.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m7",
+      "source_file": "garena-m7.webp",
+      "source_name": "M7",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/e7ad0146211258d6e4ff4c9be49834be.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "parafal",
+      "source_file": "garena-parafal.webp",
+      "source_name": "PARAFAL",
+      "source_url": "https://ff.garena.com/en/weapons/",
+      "source_kind": "official"
+    },
+    {
+      "asset": "scar",
+      "source_file": "garena-scar.webp",
+      "source_name": "SCAR",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5f07a4687e38296c2f5e95e296d8d51b.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "shield-gun",
+      "source_file": "garena-shield-gun.webp",
+      "source_name": "Shield Gun",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/0d3e888a3e44e38bcf1bf78a7a500f8b.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "treatment-laser-gun",
+      "source_file": "garena-treatment-laser-gun.webp",
+      "source_name": "Treatment Laser Gun",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/138f1641addbe25de161dd0037cb80e9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "xm8",
+      "source_file": "garena-xm8.webp",
+      "source_name": "XM8",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f4fd729d5d723c9d9e6acea55706d428.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "bizon",
+      "source_file": "garena-bizon.webp",
+      "source_name": "Bizon",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f7e85f353cc9463cfb0ab105add251b9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "cg15",
+      "source_file": "garena-cg15.webp",
+      "source_name": "CG15",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/efb774d875151b9faa51366c4d5ed699.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "mac10",
+      "source_file": "garena-mac10.webp",
+      "source_name": "MAC10",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0f4164f6bd1d1b2d84924cf06486aa96.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "mp40",
+      "source_file": "garena-mp40.webp",
+      "source_name": "MP40",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/dc148c9021b38531e6e0de8e15970e53.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "mp5",
+      "source_file": "garena-mp5.webp",
+      "source_name": "MP5",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/ffa3810470bfe2ec0e96be36f7f75653.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "p90",
+      "source_file": "garena-p90.webp",
+      "source_name": "P90",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/60a61fd8deab840ef913b93ecd7f2882.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "skorp",
+      "source_file": "garena-skorp.webp",
+      "source_name": "Skorp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/d6513a255a4a686b7bb3f21c13af1df6.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "thompson",
+      "source_file": "garena-thompson.webp",
+      "source_name": "Thompson",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/774de06b4f1a2c3708119733a4ddd7f5.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "ump",
+      "source_file": "garena-ump.webp",
+      "source_name": "UMP",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/45f4534bf331d27bba092af3691c0e3b.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "vector",
+      "source_file": "garena-vector.webp",
+      "source_name": "Vector",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c1b06eb80e2c4f02bef1f8087765c199.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "vss",
+      "source_file": "garena-vss.webp",
+      "source_name": "VSS",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/60c2f74d8d87290681c0a0dbdffcb8b9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "gatling",
+      "source_file": "garena-gatling.webp",
+      "source_name": "Gatling",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/df16d03e0649a503f92de68ab0aac585.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "kord",
+      "source_file": "garena-kord.webp",
+      "source_name": "Kord",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/631c6fceb57830faf26ffacfd1726556.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m60",
+      "source_file": "garena-m60.webp",
+      "source_name": "М60",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/2d75bdd4d64bed99556825534851249e.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m249",
+      "source_file": "garena-m249.webp",
+      "source_name": "M249",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c0cd7df4ad6265497183c56408033e84.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "rpk",
+      "source_file": "garena-rpk.webp",
+      "source_name": "RPK",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/1e31b81d4ed25a10d89166a1a275d8a1.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "charge-buster",
+      "source_file": "garena-charge-buster.webp",
+      "source_name": "Charge Buster",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/cc8e2f2ec7f785b93590d7646d2bee84.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m1014",
+      "source_file": "garena-m1014.webp",
+      "source_name": "M1014",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/ee748629c0e7e1dda3f4f8147648d486.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m1887",
+      "source_file": "garena-m1887.webp",
+      "source_name": "M1887",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20229/c642875194de4e4e544e58513b92a4ae.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m590",
+      "source_file": "garena-m590.webp",
+      "source_name": "M590",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202412/911ef415c743f4618332b079fec0c547.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "mag-7",
+      "source_file": "garena-mag-7.webp",
+      "source_name": "MAG-7",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c083b9923bb4e2fe20dc572a6f65818d.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "spas12",
+      "source_file": "garena-spas12.webp",
+      "source_name": "SPAS12",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3b7c991baf200535e98e41de53815d5c.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "trogon",
+      "source_file": "garena-trogon.webp",
+      "source_name": "Trogon",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202212/3d5049d73829111f5fde250b61cda07f.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "awm",
+      "source_file": "garena-awm.webp",
+      "source_name": "AWM",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/bf268d2f9b0cb421ce1bd3b581fc9924.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "hawk",
+      "source_file": "garena-hawk.webp",
+      "source_name": "Hawk",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/1d36261a4c6823fd96076baf962bf22e.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "kar98k",
+      "source_file": "garena-kar98k.webp",
+      "source_name": "Kar98k",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f0d9ce079561f1ae65472cacd8707139.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m24",
+      "source_file": "garena-m24.webp",
+      "source_name": "M24",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/196e9c4af34d1709974016106db22b18.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m82b",
+      "source_file": "garena-m82b.webp",
+      "source_name": "M82B",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0a30d6bcf413ffacded1230f747bfb36.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "healing-sniper",
+      "source_file": "garena-healing-sniper.webp",
+      "source_name": "Healing Sniper",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3a160e5e1833dfdb2d8eab657bb62dc1.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "vsk94",
+      "source_file": "garena-vsk94.webp",
+      "source_name": "VSK94",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20246/e7f33ba7124e80b60d6fd9149de7601f.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "ac80",
+      "source_file": "garena-ac80.webp",
+      "source_name": "AC80",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/a6ef7cbb8dff95b6fd4b701601ce338a.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m14",
+      "source_file": "garena-m14.webp",
+      "source_name": "M14",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/1ba9139067b1e18044edc9efa1a75ca6.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "sks",
+      "source_file": "garena-sks.webp",
+      "source_name": "SKS",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/d8a7797a0cb0d3e82d00153a4415c905.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "svd",
+      "source_file": "garena-svd.webp",
+      "source_name": "SVD",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/eda7684b0854c1b1136d87927a2fbcbd.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "winchester",
+      "source_file": "garena-winchester.webp",
+      "source_name": "Winchester",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202510/efd3e2a5d59ed24c247abaadfff97022.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "woodpecker",
+      "source_file": "garena-woodpecker.webp",
+      "source_name": "Woodpecker",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/57039d8e746433254d5912d64df8ec79.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "desert-eagle",
+      "source_file": "garena-desert-eagle.webp",
+      "source_name": "DESERT EAGLE",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/262c55300da7b4070ad76611e2003fc5.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "flamethrower",
+      "source_file": "garena-flamethrower.webp",
+      "source_name": "Flamethrower",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/e4fdaca2482dd5a5a860f2b40d4cc7be.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "g18",
+      "source_file": "garena-g18.webp",
+      "source_name": "G18",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5528d2a0820bc1ed8b6064b9c20ab218.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "healing-pistol",
+      "source_file": "garena-healing-pistol.webp",
+      "source_name": "Healing Pistol",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f3bc5385dea6a1dba577a733c7458b98.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m1873",
+      "source_file": "garena-m1873.webp",
+      "source_name": "M1873",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/835df2c791ed827034bb65c9f8af33a4.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m1917",
+      "source_file": "garena-m1917.webp",
+      "source_name": "M1917",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f176e1be59ac986474cffc8d26b3e8cc.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m500",
+      "source_file": "garena-m500.webp",
+      "source_name": "M500",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/8416c43b66be1ecf9f54301c26506a69.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "uzi",
+      "source_file": "garena-uzi.webp",
+      "source_name": "UZI",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c3e906b732e6016a8d4076b8179feb17.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "usp",
+      "source_file": "garena-usp.webp",
+      "source_name": "USP",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3e1f2407e7f97689071651a190757325.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "usp-2",
+      "source_file": "garena-usp-2.webp",
+      "source_name": "USP-2",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3e1f2407e7f97689071651a190757325.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "crossbow",
+      "source_file": "garena-crossbow.webp",
+      "source_name": "Crossbow",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/7eddf7c5c7f19d603233f302b695ab09.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "fgl-24",
+      "source_file": "garena-fgl-24.webp",
+      "source_name": "FGL-24",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20246/2777e4a3343b6aa480eff589ff7e717b.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "hand-cannon",
+      "source_file": "garena-hand-cannon.webp",
+      "source_name": "Hand-Cannon",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/b2d5940583d09254dee082989a8ff26a.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "m79",
+      "source_file": "garena-m79.webp",
+      "source_name": "M79",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f51732eb72f3beb88c021765f70818a9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "mgl140",
+      "source_file": "garena-mgl140.webp",
+      "source_name": "MGL140",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/42b16b1e58e45e53d99c053e027859c5.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "rgs50",
+      "source_file": "garena-rgs50.webp",
+      "source_name": "RGS50",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official/a42ed7790ad0Icon_slot_RGS50.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "bat",
+      "source_file": "garena-bat.webp",
+      "source_name": "Bat",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/698669f81b6b3d5c79f6059d1d934ad5.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "ff-knife",
+      "source_file": "garena-ff-knife.webp",
+      "source_name": "FF Knife",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0a7e9a154df42962387613548e6def2f.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "katana",
+      "source_file": "garena-katana.webp",
+      "source_name": "Katana",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/902c1bed5215a00de66473a64b454349.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "parang",
+      "source_file": "garena-parang.webp",
+      "source_name": "Parang",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/294b5dffe76f6f1c699569bf7e83d50d.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "pan",
+      "source_file": "garena-pan.webp",
+      "source_name": "Pan",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5fcb37e763470c7f785a1bc5055d398d.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "scythe",
+      "source_file": "garena-scythe.webp",
+      "source_name": "Scythe",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/d19bc732b69e186cdfd8b4486265f321.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "flash-freeze",
+      "source_file": "garena-flash-freeze.webp",
+      "source_name": "Flash Freeze",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f1fa2b4ca56ae57d38e97e5beccce8bb.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "flame-grenade",
+      "source_file": "garena-flame-grenade.webp",
+      "source_name": "Flame Grenade",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/33358f1af6893411fe850870cb2bade9.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "gloo-melter",
+      "source_file": "garena-gloo-melter.webp",
+      "source_name": "Gloo Melter",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/88e13401f4662dc43580cfbf8f7f65fa.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "gloo-wall",
+      "source_file": "garena-gloo-wall.webp",
+      "source_name": "Gloo Wall",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/71c9976d4b23cc37bb15fe398d186b7e.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "grenade",
+      "source_file": "garena-grenade.webp",
+      "source_name": "Grenade",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/326bfdf7bbf526c9d1b0ae000e1aee61.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "smoke-grenade",
+      "source_file": "garena-smoke-grenade.webp",
+      "source_name": "Smoke Grenade",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/9d722d5dc960baa4018ee34e35e4e4ef.png",
+      "source_kind": "official"
+    },
+    {
+      "asset": "sonar-grenade",
+      "source_file": "garena-sonar-grenade.webp",
+      "source_name": "Sonar Grenade",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/c3f5e06b7b21b70293eeb9192f870955.png",
+      "source_kind": "official"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AK47 / AK",
+      "category": "Rifles",
+      "asset": "ak47",
+      "action": "fire",
+      "source_name": "AK47",
+      "source_file": "garena-ak47.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/bc3a04e98225ef35976771ad109d4ee6.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "AN94",
+      "category": "Rifles",
+      "asset": "an94",
+      "action": "fire",
+      "source_name": "AN94",
+      "source_file": "garena-an94.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/6e18ff1a4fdc4cbd9650f62b7d5bbd1a.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "AUG",
+      "category": "Rifles",
+      "asset": "aug",
+      "action": "fire",
+      "source_name": "AUG",
+      "source_file": "garena-aug.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/fc7eb3fd85c623b2c999a7958feb86e7.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "FAMAS",
+      "category": "Rifles",
+      "asset": "famas",
+      "action": "fire",
+      "source_name": "FAMAS",
+      "source_file": "garena-famas.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0516690dac28178d6baf02644a0980f9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "G36",
+      "category": "Rifles",
+      "asset": "g36",
+      "action": "fire",
+      "source_name": "G36",
+      "source_file": "wiki-g36.webp",
+      "source_url": "https://freefire.fandom.com/wiki/File:G36.png",
+      "source_kind": "community"
+    },
+    {
+      "name": "Groza",
+      "category": "Rifles",
+      "asset": "groza",
+      "action": "fire",
+      "source_name": "Groza",
+      "source_file": "garena-groza.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c49e5145e37a5c66b1202e04031f6363.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Heat Gun / Heatgun",
+      "category": "Rifles",
+      "asset": "plasma",
+      "action": "fire",
+      "source_name": "Plasma",
+      "source_file": "garena-plasma.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c824bf1a7bbffed3f77588e051ff2f70.png",
+      "source_kind": "official",
+      "alias_note": "Rótulo legado; usa a arte oficial atual de Plasma."
+    },
+    {
+      "name": "Kingfisher",
+      "category": "Rifles",
+      "asset": "kingfisher",
+      "action": "fire",
+      "source_name": "Kingfisher",
+      "source_file": "garena-kingfisher.webp",
+      "source_url": "https://ff.garena.com/en/weapons/",
+      "source_kind": "official"
+    },
+    {
+      "name": "M4A1",
+      "category": "Rifles",
+      "asset": "m4a1",
+      "action": "fire",
+      "source_name": "M4A1",
+      "source_file": "garena-m4a1.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f9d228799e70a11feaf2c493bedb007e.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M7",
+      "category": "Rifles",
+      "asset": "m7",
+      "action": "fire",
+      "source_name": "M7",
+      "source_file": "garena-m7.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/e7ad0146211258d6e4ff4c9be49834be.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "PARAFAL",
+      "category": "Rifles",
+      "asset": "parafal",
+      "action": "fire",
+      "source_name": "PARAFAL",
+      "source_file": "garena-parafal.webp",
+      "source_url": "https://ff.garena.com/en/weapons/",
+      "source_kind": "official"
+    },
+    {
+      "name": "SCAR",
+      "category": "Rifles",
+      "asset": "scar",
+      "action": "fire",
+      "source_name": "SCAR",
+      "source_file": "garena-scar.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5f07a4687e38296c2f5e95e296d8d51b.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Shield Gun",
+      "category": "Rifles",
+      "asset": "shield-gun",
+      "action": "fire",
+      "source_name": "Shield Gun",
+      "source_file": "garena-shield-gun.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/0d3e888a3e44e38bcf1bf78a7a500f8b.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Treatment Laser Gun",
+      "category": "Rifles",
+      "asset": "treatment-laser-gun",
+      "action": "fire",
+      "source_name": "Treatment Laser Gun",
+      "source_file": "garena-treatment-laser-gun.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/138f1641addbe25de161dd0037cb80e9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "XM8",
+      "category": "Rifles",
+      "asset": "xm8",
+      "action": "fire",
+      "source_name": "XM8",
+      "source_file": "garena-xm8.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f4fd729d5d723c9d9e6acea55706d428.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Plasma",
+      "category": "Rifles",
+      "asset": "plasma",
+      "action": "fire",
+      "source_name": "Plasma",
+      "source_file": "garena-plasma.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c824bf1a7bbffed3f77588e051ff2f70.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Bizon",
+      "category": "Submetralhadoras",
+      "asset": "bizon",
+      "action": "fire",
+      "source_name": "Bizon",
+      "source_file": "garena-bizon.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f7e85f353cc9463cfb0ab105add251b9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "CG15",
+      "category": "Submetralhadoras",
+      "asset": "cg15",
+      "action": "fire",
+      "source_name": "CG15",
+      "source_file": "garena-cg15.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/efb774d875151b9faa51366c4d5ed699.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "MAC10",
+      "category": "Submetralhadoras",
+      "asset": "mac10",
+      "action": "fire",
+      "source_name": "MAC10",
+      "source_file": "garena-mac10.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0f4164f6bd1d1b2d84924cf06486aa96.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "MP40",
+      "category": "Submetralhadoras",
+      "asset": "mp40",
+      "action": "fire",
+      "source_name": "MP40",
+      "source_file": "garena-mp40.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/dc148c9021b38531e6e0de8e15970e53.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "MP5",
+      "category": "Submetralhadoras",
+      "asset": "mp5",
+      "action": "fire",
+      "source_name": "MP5",
+      "source_file": "garena-mp5.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/ffa3810470bfe2ec0e96be36f7f75653.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "P90",
+      "category": "Submetralhadoras",
+      "asset": "p90",
+      "action": "fire",
+      "source_name": "P90",
+      "source_file": "garena-p90.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/60a61fd8deab840ef913b93ecd7f2882.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Skorp",
+      "category": "Submetralhadoras",
+      "asset": "skorp",
+      "action": "fire",
+      "source_name": "Skorp",
+      "source_file": "garena-skorp.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/d6513a255a4a686b7bb3f21c13af1df6.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Thompson",
+      "category": "Submetralhadoras",
+      "asset": "thompson",
+      "action": "fire",
+      "source_name": "Thompson",
+      "source_file": "garena-thompson.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/774de06b4f1a2c3708119733a4ddd7f5.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "UMP",
+      "category": "Submetralhadoras",
+      "asset": "ump",
+      "action": "fire",
+      "source_name": "UMP",
+      "source_file": "garena-ump.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/45f4534bf331d27bba092af3691c0e3b.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Vector",
+      "category": "Submetralhadoras",
+      "asset": "vector",
+      "action": "fire",
+      "source_name": "Vector",
+      "source_file": "garena-vector.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c1b06eb80e2c4f02bef1f8087765c199.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "VSS",
+      "category": "Submetralhadoras",
+      "asset": "vss",
+      "action": "fire",
+      "source_name": "VSS",
+      "source_file": "garena-vss.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/60c2f74d8d87290681c0a0dbdffcb8b9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Gatling",
+      "category": "Metralhadoras",
+      "asset": "gatling",
+      "action": "fire",
+      "source_name": "Gatling",
+      "source_file": "garena-gatling.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/df16d03e0649a503f92de68ab0aac585.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Kord",
+      "category": "Metralhadoras",
+      "asset": "kord",
+      "action": "fire",
+      "source_name": "Kord",
+      "source_file": "garena-kord.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/631c6fceb57830faf26ffacfd1726556.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M60",
+      "category": "Metralhadoras",
+      "asset": "m60",
+      "action": "fire",
+      "source_name": "М60",
+      "source_file": "garena-m60.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/2d75bdd4d64bed99556825534851249e.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M249",
+      "category": "Metralhadoras",
+      "asset": "m249",
+      "action": "fire",
+      "source_name": "M249",
+      "source_file": "garena-m249.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c0cd7df4ad6265497183c56408033e84.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "RPK",
+      "category": "Metralhadoras",
+      "asset": "rpk",
+      "action": "fire",
+      "source_name": "RPK",
+      "source_file": "garena-rpk.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/1e31b81d4ed25a10d89166a1a275d8a1.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Charge Buster",
+      "category": "Escopetas",
+      "asset": "charge-buster",
+      "action": "fire",
+      "source_name": "Charge Buster",
+      "source_file": "garena-charge-buster.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/cc8e2f2ec7f785b93590d7646d2bee84.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M1014",
+      "category": "Escopetas",
+      "asset": "m1014",
+      "action": "fire",
+      "source_name": "M1014",
+      "source_file": "garena-m1014.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/ee748629c0e7e1dda3f4f8147648d486.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M1887",
+      "category": "Escopetas",
+      "asset": "m1887",
+      "action": "fire",
+      "source_name": "M1887",
+      "source_file": "garena-m1887.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20229/c642875194de4e4e544e58513b92a4ae.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M590",
+      "category": "Escopetas",
+      "asset": "m590",
+      "action": "fire",
+      "source_name": "M590",
+      "source_file": "garena-m590.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202412/911ef415c743f4618332b079fec0c547.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "MAG-7",
+      "category": "Escopetas",
+      "asset": "mag-7",
+      "action": "fire",
+      "source_name": "MAG-7",
+      "source_file": "garena-mag-7.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c083b9923bb4e2fe20dc572a6f65818d.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "SPAS12",
+      "category": "Escopetas",
+      "asset": "spas12",
+      "action": "fire",
+      "source_name": "SPAS12",
+      "source_file": "garena-spas12.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3b7c991baf200535e98e41de53815d5c.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Trogon",
+      "category": "Escopetas",
+      "asset": "trogon",
+      "action": "fire",
+      "source_name": "Trogon",
+      "source_file": "garena-trogon.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202212/3d5049d73829111f5fde250b61cda07f.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "AWM",
+      "category": "Rifles de precisão",
+      "asset": "awm",
+      "action": "fire",
+      "source_name": "AWM",
+      "source_file": "garena-awm.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/bf268d2f9b0cb421ce1bd3b581fc9924.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Hawk",
+      "category": "Rifles de precisão",
+      "asset": "hawk",
+      "action": "fire",
+      "source_name": "Hawk",
+      "source_file": "garena-hawk.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/1d36261a4c6823fd96076baf962bf22e.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Kar98k",
+      "category": "Rifles de precisão",
+      "asset": "kar98k",
+      "action": "fire",
+      "source_name": "Kar98k",
+      "source_file": "garena-kar98k.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f0d9ce079561f1ae65472cacd8707139.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M24",
+      "category": "Rifles de precisão",
+      "asset": "m24",
+      "action": "fire",
+      "source_name": "M24",
+      "source_file": "garena-m24.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/196e9c4af34d1709974016106db22b18.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M82B",
+      "category": "Rifles de precisão",
+      "asset": "m82b",
+      "action": "fire",
+      "source_name": "M82B",
+      "source_file": "garena-m82b.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0a30d6bcf413ffacded1230f747bfb36.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Healing Sniper / Treatment Sniper",
+      "category": "Rifles de precisão",
+      "asset": "healing-sniper",
+      "action": "fire",
+      "source_name": "Healing Sniper",
+      "source_file": "garena-healing-sniper.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3a160e5e1833dfdb2d8eab657bb62dc1.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "VSK94",
+      "category": "Rifles de precisão",
+      "asset": "vsk94",
+      "action": "fire",
+      "source_name": "VSK94",
+      "source_file": "garena-vsk94.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20246/e7f33ba7124e80b60d6fd9149de7601f.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "AC80",
+      "category": "Rifles de atirador",
+      "asset": "ac80",
+      "action": "fire",
+      "source_name": "AC80",
+      "source_file": "garena-ac80.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/a6ef7cbb8dff95b6fd4b701601ce338a.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M14",
+      "category": "Rifles de atirador",
+      "asset": "m14",
+      "action": "fire",
+      "source_name": "M14",
+      "source_file": "garena-m14.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/1ba9139067b1e18044edc9efa1a75ca6.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "SKS",
+      "category": "Rifles de atirador",
+      "asset": "sks",
+      "action": "fire",
+      "source_name": "SKS",
+      "source_file": "garena-sks.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/d8a7797a0cb0d3e82d00153a4415c905.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "SVD",
+      "category": "Rifles de atirador",
+      "asset": "svd",
+      "action": "fire",
+      "source_name": "SVD",
+      "source_file": "garena-svd.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/eda7684b0854c1b1136d87927a2fbcbd.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Winchester",
+      "category": "Rifles de atirador",
+      "asset": "winchester",
+      "action": "fire",
+      "source_name": "Winchester",
+      "source_file": "garena-winchester.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202510/efd3e2a5d59ed24c247abaadfff97022.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Woodpecker",
+      "category": "Rifles de atirador",
+      "asset": "woodpecker",
+      "action": "fire",
+      "source_name": "Woodpecker",
+      "source_file": "garena-woodpecker.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/57039d8e746433254d5912d64df8ec79.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Desert Eagle",
+      "category": "Pistolas",
+      "asset": "desert-eagle",
+      "action": "fire",
+      "source_name": "DESERT EAGLE",
+      "source_file": "garena-desert-eagle.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/262c55300da7b4070ad76611e2003fc5.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Flamethrower",
+      "category": "Pistolas",
+      "asset": "flamethrower",
+      "action": "fire",
+      "source_name": "Flamethrower",
+      "source_file": "garena-flamethrower.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/e4fdaca2482dd5a5a860f2b40d4cc7be.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "G18",
+      "category": "Pistolas",
+      "asset": "g18",
+      "action": "fire",
+      "source_name": "G18",
+      "source_file": "garena-g18.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5528d2a0820bc1ed8b6064b9c20ab218.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Healing Pistol / Treatment Gun",
+      "category": "Pistolas",
+      "asset": "healing-pistol",
+      "action": "fire",
+      "source_name": "Healing Pistol",
+      "source_file": "garena-healing-pistol.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f3bc5385dea6a1dba577a733c7458b98.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M1873",
+      "category": "Pistolas",
+      "asset": "m1873",
+      "action": "fire",
+      "source_name": "M1873",
+      "source_file": "garena-m1873.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/835df2c791ed827034bb65c9f8af33a4.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M1917",
+      "category": "Pistolas",
+      "asset": "m1917",
+      "action": "fire",
+      "source_name": "M1917",
+      "source_file": "garena-m1917.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f176e1be59ac986474cffc8d26b3e8cc.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M500",
+      "category": "Pistolas",
+      "asset": "m500",
+      "action": "fire",
+      "source_name": "M500",
+      "source_file": "garena-m500.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/8416c43b66be1ecf9f54301c26506a69.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Mini Uzi",
+      "category": "Pistolas",
+      "asset": "uzi",
+      "action": "fire",
+      "source_name": "UZI",
+      "source_file": "garena-uzi.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c3e906b732e6016a8d4076b8179feb17.png",
+      "source_kind": "official",
+      "alias_note": "Rótulo legado; usa a arte oficial atual de UZI."
+    },
+    {
+      "name": "UZI",
+      "category": "Pistolas",
+      "asset": "uzi",
+      "action": "fire",
+      "source_name": "UZI",
+      "source_file": "garena-uzi.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/c3e906b732e6016a8d4076b8179feb17.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "USP",
+      "category": "Pistolas",
+      "asset": "usp",
+      "action": "fire",
+      "source_name": "USP",
+      "source_file": "garena-usp.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3e1f2407e7f97689071651a190757325.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "USP-2",
+      "category": "Pistolas",
+      "asset": "usp-2",
+      "action": "fire",
+      "source_name": "USP-2",
+      "source_file": "garena-usp-2.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/3e1f2407e7f97689071651a190757325.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Crossbow",
+      "category": "Arcos",
+      "asset": "crossbow",
+      "action": "fire",
+      "source_name": "Crossbow",
+      "source_file": "garena-crossbow.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/7eddf7c5c7f19d603233f302b695ab09.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "FGL-24",
+      "category": "Lançadores",
+      "asset": "fgl-24",
+      "action": "fire",
+      "source_name": "FGL-24",
+      "source_file": "garena-fgl-24.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20246/2777e4a3343b6aa480eff589ff7e717b.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Hand Cannon",
+      "category": "Lançadores",
+      "asset": "hand-cannon",
+      "action": "fire",
+      "source_name": "Hand-Cannon",
+      "source_file": "garena-hand-cannon.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/b2d5940583d09254dee082989a8ff26a.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "M79",
+      "category": "Lançadores",
+      "asset": "m79",
+      "action": "fire",
+      "source_name": "M79",
+      "source_file": "garena-m79.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f51732eb72f3beb88c021765f70818a9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "MGL140",
+      "category": "Lançadores",
+      "asset": "mgl140",
+      "action": "fire",
+      "source_name": "MGL140",
+      "source_file": "garena-mgl140.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/42b16b1e58e45e53d99c053e027859c5.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "RGS50",
+      "category": "Lançadores",
+      "asset": "rgs50",
+      "action": "fire",
+      "source_name": "RGS50",
+      "source_file": "garena-rgs50.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official/a42ed7790ad0Icon_slot_RGS50.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Bat",
+      "category": "Corpo a corpo",
+      "asset": "bat",
+      "action": "swing",
+      "source_name": "Bat",
+      "source_file": "garena-bat.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/698669f81b6b3d5c79f6059d1d934ad5.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "FF Knife",
+      "category": "Corpo a corpo",
+      "asset": "ff-knife",
+      "action": "swing",
+      "source_name": "FF Knife",
+      "source_file": "garena-ff-knife.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/0a7e9a154df42962387613548e6def2f.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Katana",
+      "category": "Corpo a corpo",
+      "asset": "katana",
+      "action": "swing",
+      "source_name": "Katana",
+      "source_file": "garena-katana.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/902c1bed5215a00de66473a64b454349.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Machete",
+      "category": "Corpo a corpo",
+      "asset": "parang",
+      "action": "swing",
+      "source_name": "Parang",
+      "source_file": "garena-parang.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/294b5dffe76f6f1c699569bf7e83d50d.png",
+      "source_kind": "official",
+      "alias_note": "Nome histórico/alternativo; usa o recorte atual listado pela Garena como Parang."
+    },
+    {
+      "name": "Pan",
+      "category": "Corpo a corpo",
+      "asset": "pan",
+      "action": "swing",
+      "source_name": "Pan",
+      "source_file": "garena-pan.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/5fcb37e763470c7f785a1bc5055d398d.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Parang",
+      "category": "Corpo a corpo",
+      "asset": "parang",
+      "action": "swing",
+      "source_name": "Parang",
+      "source_file": "garena-parang.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/294b5dffe76f6f1c699569bf7e83d50d.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Scythe",
+      "category": "Corpo a corpo",
+      "asset": "scythe",
+      "action": "swing",
+      "source_name": "Scythe",
+      "source_file": "garena-scythe.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/d19bc732b69e186cdfd8b4486265f321.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Dragon Freeze",
+      "category": "Arremessáveis e especiais",
+      "asset": "flash-freeze",
+      "action": "triple",
+      "source_name": "Flash Freeze",
+      "source_file": "garena-flash-freeze.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f1fa2b4ca56ae57d38e97e5beccce8bb.png",
+      "source_kind": "official",
+      "alias_note": "A Garena descreve como Flash Freeze aprimorada; compartilha o recorte-base, mas recebe animação de triplo impacto."
+    },
+    {
+      "name": "Flash Freeze",
+      "category": "Arremessáveis e especiais",
+      "asset": "flash-freeze",
+      "action": "throw",
+      "source_name": "Flash Freeze",
+      "source_file": "garena-flash-freeze.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/f1fa2b4ca56ae57d38e97e5beccce8bb.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Flame Grenade",
+      "category": "Arremessáveis e especiais",
+      "asset": "flame-grenade",
+      "action": "throw",
+      "source_name": "Flame Grenade",
+      "source_file": "garena-flame-grenade.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/33358f1af6893411fe850870cb2bade9.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Gloo Melter",
+      "category": "Arremessáveis e especiais",
+      "asset": "gloo-melter",
+      "action": "throw",
+      "source_name": "Gloo Melter",
+      "source_file": "garena-gloo-melter.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20229/88e13401f4662dc43580cfbf8f7f65fa.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Gloo Wall",
+      "category": "Arremessáveis e especiais",
+      "asset": "gloo-wall",
+      "action": "deploy",
+      "source_name": "Gloo Wall",
+      "source_file": "garena-gloo-wall.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/71c9976d4b23cc37bb15fe398d186b7e.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Grenade",
+      "category": "Arremessáveis e especiais",
+      "asset": "grenade",
+      "action": "throw",
+      "source_name": "Grenade",
+      "source_file": "garena-grenade.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/326bfdf7bbf526c9d1b0ae000e1aee61.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Smoke Grenade",
+      "category": "Arremessáveis e especiais",
+      "asset": "smoke-grenade",
+      "action": "throw",
+      "source_name": "Smoke Grenade",
+      "source_file": "garena-smoke-grenade.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/9d722d5dc960baa4018ee34e35e4e4ef.png",
+      "source_kind": "official"
+    },
+    {
+      "name": "Sonar Grenade",
+      "category": "Arremessáveis e especiais",
+      "asset": "sonar-grenade",
+      "action": "throw",
+      "source_name": "Sonar Grenade",
+      "source_file": "garena-sonar-grenade.webp",
+      "source_url": "https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/c3f5e06b7b21b70293eeb9192f870955.png",
+      "source_kind": "official"
+    }
+  ]
+}
