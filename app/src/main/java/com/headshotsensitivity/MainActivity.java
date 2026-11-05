@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
+        settings.setMediaPlaybackRequiresUserGesture(false);
         settings.setDefaultTextEncodingName("UTF-8");
         webView.addJavascriptInterface(new DeviceBridge(this), "AndroidDevice");
         webView.setWebViewClient(new WebViewClient());

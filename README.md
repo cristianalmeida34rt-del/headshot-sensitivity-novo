@@ -6,7 +6,8 @@ Aplicativo Android independente para criar sugestões de sensibilidade para test
 
 - Gerador por etapas com modelo/marca do celular, perfil de resposta, tamanho sugerido do botão, DPI sugerida e seleção de várias armas numa configuração combinada.
 - Catálogo com 84 entradas e 80 recortes transparentes, otimizados para uso local; ao tocar numa arma, o app anima a ação correspondente (disparo/recuo, golpe, arremesso, implantação ou triplo impacto).
-- Tema tático de arsenal em grafite, amarelo e azul-ciano, com abertura cinematográfica de 7,35 segundos: M4A1, AWM e katana entram em perspectiva 3D, a retícula trava o alvo e um impacto final faz a transição para o app. Respeita a preferência do Android por movimento reduzido.
+- Tema tático de arsenal em grafite, amarelo e azul-ciano, com abertura cinematográfica de 7,35 segundos: M4A1, AWM e katana entram em perspectiva 3D, a retícula trava o alvo e um impacto final faz a transição para o app. Dois tiros e uma recarga são sincronizados com a cena; o som pode ser desligado no splash e a preferência fica salva localmente. Respeita a preferência do Android por movimento reduzido.
+- Novo avatar Cartoon 3D no launcher quadrado, redondo e adaptativo; o master usado nos assets locais está otimizado em WebP.
 - Diagnóstico do aparelho e perfil/histórico mantidos no dispositivo. As sugestões são pontos de partida; o app não aplica DPI nem altera o Free Fire.
 - Notícias sincronizadas pela automação a partir da página oficial da Garena em português.
 
