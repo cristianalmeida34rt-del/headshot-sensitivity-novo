@@ -25,18 +25,18 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setStatusBarColor(Color.rgb(16, 10, 32));
-        getWindow().setNavigationBarColor(Color.rgb(16, 10, 32));
+        getWindow().setStatusBarColor(Color.rgb(11, 11, 15));
+        getWindow().setNavigationBarColor(Color.rgb(11, 11, 15));
         getWindow().getDecorView().setSystemUiVisibility(0);
 
         // Apaga os dados locais de sessão Google criados por versões antigas do app.
         getSharedPreferences("google_session", MODE_PRIVATE).edit().clear().apply();
 
         FrameLayout layout = new FrameLayout(this);
-        layout.setBackgroundColor(Color.rgb(16, 10, 32));
+        layout.setBackgroundColor(Color.rgb(11, 11, 15));
 
         webView = new WebView(this);
-        webView.setBackgroundColor(Color.rgb(16, 10, 32));
+        webView.setBackgroundColor(Color.rgb(11, 11, 15));
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
